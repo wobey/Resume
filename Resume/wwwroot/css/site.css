@@ -1,0 +1,230 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /*  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;*/
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 60px;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.resume {
+    text-align: center;
+    padding: 20px 40px 60px 40px;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform .25s ease, box-shadow .25s ease;
+
+    .headshot-picture {
+        width: 120px;
+        border-radius: 50%;
+        border: 4px solid #667eea;
+        /*        filter: grayscale(75%);*/
+    }
+
+    h1 {
+        margin: 10px, 0;
+        font-size: 24px;
+        color: #333;
+    }
+
+    h2 {
+        margin: 10px, 0;
+        font-size: 16px;
+        color: #333;
+        border-bottom: 2px solid #667eea;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+}
+
+    .resume:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0,0,0,.20);
+        /*        box-shadow: 0 35px 70px rgba(0,0,0,.35);*/
+    }
+
+.job-title {
+    margin-bottom: 5px;
+}
+
+.tagline {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 10px;
+}
+
+.statement {
+    margin: 0 20px 5px 20px;
+/*    margin-top: 0;
+    margin-bottom: 5px;
+*/
+    font-size: 10px;
+}
+
+.resume-pdf {
+    font-size: 8px;
+    margin-bottom: 5px;
+}
+
+.contact {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.location {
+    margin-bottom: 1px;
+}
+
+.email-contact {
+    margin-bottom: 3px;
+}
+
+.skills {
+    /*    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    margin-bottom: 10px;
+    align-items: center;*/
+    margin-bottom: 30px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    margin-left: 50px;
+    margin-right: 50px;
+/*    margin-bottom: 0px;*/
+
+    /*    gap: 5px;*/
+}
+
+.skill-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0; /*keeps icons same size*/
+
+    /*    margin: 2.5px;
+    margin-right: 5px;*/
+}
+
+.skill-name {
+    width: 70px;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 12px;
+/*
+    text-align: left;
+    font-weight: 500;
+*/
+/*    font-size: 10px;
+    color: #333;
+    margin: 2px 0;*/
+}
+
+.bar {
+    flex: 1;
+    height: 10px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+    /*    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin: 5px 0;
+    overflow: hidden;*/
+}
+
+.fill {
+    height: 100%;
+    background: #667eea;
+    border-radius: 4px;
+}
+
+.backend {
+    width: 90%;
+    background-color: #F28B82; /* Soft Coral */
+}
+
+.sql {
+    width: 95%;
+    background-color: #8AB4F8; /* Pastel Blue */
+}
+
+.python {
+    width: 85%;
+    background-color: #81C995; /* Sage Green */
+}
+
+.automation {
+    width: 90%;
+    background-color: #A7D7C5; /* Mint */
+}
+
+.csharp {
+    width: 70%;
+    background-color: #FBCB92; /* Peach */
+}
+
+.frontend {
+    width: 60%;
+    background-color: #D7BDE2; /* Lavender */
+}
+
+
+.experience{
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.education{
+    font-size: 10px;
+    margin-bottom: 10px;
+}
