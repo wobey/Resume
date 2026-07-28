@@ -66,14 +66,14 @@ a:hover {
     }
 
     h1 {
-        margin: 10px, 0;
-        font-size: 24px;
+        margin: 10px 0;
+        font-size: 1.75rem;
         color: #333;
     }
 
     h2 {
-        margin: 10px, 0;
-        font-size: 16px;
+        margin: 10px 0;
+        font-size: 1.375rem;
         color: #333;
         border-bottom: 2px solid #667eea;
         display: inline-block;
@@ -89,6 +89,7 @@ a:hover {
     }
 
 .job-title {
+    font-size: 1rem;
     margin-bottom: 5px;
 }
 
@@ -96,7 +97,7 @@ a:hover {
     margin-top: 0;
     margin-bottom: 5px;
     font-style: italic;
-    font-size: 10px;
+    font-size: 0.8125rem;
 }
 
 .statement {
@@ -104,16 +105,16 @@ a:hover {
 /*    margin-top: 0;
     margin-bottom: 5px;
 */
-    font-size: 10px;
+    font-size: 0.9375rem;
 }
 
 .resume-pdf {
-    font-size: 8px;
+    font-size: 0.8125rem;
     margin-bottom: 5px;
 }
 
 .contact {
-    font-size: 10px;
+    font-size: 0.9375rem;
     margin-bottom: 10px;
 }
 
@@ -159,7 +160,7 @@ a:hover {
     width: 70px;
     flex-shrink: 0;
     text-align: left;
-    font-size: 12px;
+    font-size: 0.9375rem;
 /*
     text-align: left;
     font-weight: 500;
@@ -190,41 +191,68 @@ a:hover {
 
 .backend {
     width: 90%;
-    background-color: #F28B82; /* Soft Coral */
+    /*background-color: #F28B82;*/ /* Soft Coral */
 }
 
 .sql {
     width: 95%;
-    background-color: #8AB4F8; /* Pastel Blue */
+    /*background-color: #8AB4F8;*/ /* Pastel Blue */
 }
 
 .python {
     width: 85%;
-    background-color: #81C995; /* Sage Green */
+    /*background-color: #81C995;*/ /* Sage Green */
 }
 
 .automation {
     width: 90%;
-    background-color: #A7D7C5; /* Mint */
+    /*background-color: #A7D7C5;*/ /* Mint */
 }
 
 .csharp {
     width: 70%;
-    background-color: #FBCB92; /* Peach */
+    /*background-color: #FBCB92;*/ /* Peach */
 }
 
 .frontend {
     width: 60%;
-    background-color: #D7BDE2; /* Lavender */
+    /*background-color: #D7BDE2;*/ /* Lavender */
 }
 
 
 .experience{
-    font-size: 10px;
+    font-size: 0.9375rem;
     margin-bottom: 10px;
 }
 
 .education{
-    font-size: 10px;
+    font-size: 0.9375rem;
     margin-bottom: 10px;
+}
+
+.entry {
+    margin-bottom: 20px;
+}
+
+.entry-role {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+.entry-meta {
+    font-size: 0.8125rem;
+    color: #555;
+    margin: 2px 0 6px 0;
+}
+
+.entry-dates {
+    font-style: italic;
+    color: #999;
+}
+
+.entry-summary {
+    font-size: 0.9375rem;
+    color: #333;
+    margin: 0;
 }
