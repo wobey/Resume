@@ -1,5 +1,7 @@
 # Resume Website
 
+At the start of every session, also read PROJECT_STATUS.md for current progress and next steps.
+
 ## Project Goals
 - ASP.NET Core Razor Pages
 - Single-page portfolio

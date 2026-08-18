@@ -1,10 +1,25 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "John Fitzgerald";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p><a href="~/assets/resume_full.pdf" target="_blank">Download Full Resume (PDF)</a></p>
+<div class="home">
+    <h1 class="name">John Fitzgerald</h1>
+    <p class="job-title">Software Engineer</p>
+    <p class="tagline"><i>Backend · Data · Automation</i></p>
+    <p class="statement">I build software, data systems, and automation that make work simpler.</p>
+
+    <div class="home-actions">
+        <a class="btn-cta" asp-page="/Resume">Resume</a>
+        <a class="btn-cta" asp-page="/Projects">Projects</a>
+    </div>
+
+    <p class="home-links">
+        <a href="https://www.linkedin.com/in/john-fitzgerald-91999278" target="_blank">LinkedIn</a>
+        ·
+        <a href="https://github.com/wobey" target="_blank">GitHub</a>
+        ·
+        <a href="mailto:john.fitzgerald.dev@gmail.com">Email</a>
+    </p>
 </div>
