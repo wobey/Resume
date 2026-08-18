@@ -29,6 +29,7 @@
 - Homepage (Index.cshtml) redesigned per user mockup: name/title/tagline/statement matching the Resume page's style, `.btn-cta` buttons linking to Resume and Projects, simple LinkedIn/GitHub/Email contact line. Wrapped in a new `.home` card to match the site's existing white-card-on-gradient look.
 - `.resume-pdf-btn` generalized to reusable `.btn-cta` class (used by both Home and Resume pages).
 - About.cshtml redesigned to match the layout pattern of a reference site (davidmalloryhays.com/about): centered "About Me" heading, five icon + bold-lead-line card sections (`.about-section`), styled with the site's existing light/purple theme instead of the reference's dark theme. Closing career statement folded into the last card as a plain paragraph (not a separate highlighted box, per feedback).
+- Removed the Privacy page entirely (deemed unnecessary): deleted `Privacy.cshtml`/`Privacy.cshtml.cs`, removed its nav-bar link, and removed the reference to it in the (already commented-out) footer.
 
 ## Deferred (not in current scope)
-- Broader site architecture: single-page vs. multi-page nav, consolidating About/Projects/Privacy, headshot removal.
+- Broader site architecture: single-page vs. multi-page nav, consolidating About/Projects, headshot removal.
