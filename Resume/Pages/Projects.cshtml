@@ -1,10 +1,126 @@
-﻿@page
+@page
 @model ProjectsModel
 @{
     ViewData["Title"] = "John Fitzgerald";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Projects</h1>
-    <p><a href="~/assets/resume_full.pdf" target="_blank">Download Full Resume (PDF)</a></p>
+<div class="projects">
+    <h1>Projects</h1>
+    <p class="tagline"><i>A few things I've built, from data tooling to game dev to systems programming.</i></p>
+
+    <section class="projects-section">
+        <h2>Professional Work</h2>
+
+        <div class="entry">
+            <h3 class="entry-role">Unified Reporting Infrastructure Refactor</h3>
+            <p class="entry-meta">SQL · Plx · Python · Google Apps Script</p>
+            <p class="entry-summary">Scaled and refactored a cross-team analytics platform's reporting infrastructure, improving data normalization, integrity, and reliability for daily business decision-making.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Internal Bug Management System</h3>
+            <p class="entry-meta">Google Apps Script · Google Sheets</p>
+            <p class="entry-summary">Designed and built an internal bug management system that automated QC logging, validation, and reporting, saving each team member roughly an hour per day and improving data accuracy.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Centralized Data Asset Metadata Tracker</h3>
+            <p class="entry-meta">SQL · Plx</p>
+            <p class="entry-summary">Built a centralized metadata tracking system for internal data assets (scripts, tables, dashboards, data sites), improving discoverability, reducing duplication, and standardizing data ownership across the team.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Partner Onboarding Automation</h3>
+            <p class="entry-meta">Python · SQL · JavaScript · Google Apps Script</p>
+            <p class="entry-summary">Designed internal tooling to automate partner onboarding workflows, reducing manual agent effort by 2–5+ hours per week per agent.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Partner Lifecycle &amp; QA Dashboards</h3>
+            <p class="entry-meta">Plx · Reporty</p>
+            <p class="entry-summary">Built and maintained scalable dashboards and data pipelines used across teams to track partner lifecycle, QA validation, and operational metrics, then led their migration and consolidation for long-term reliability.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Google Maps Booking API Support Tooling</h3>
+            <p class="entry-meta">SQL · Python · JavaScript</p>
+            <p class="entry-summary">Developed workflows to quickly diagnose and reduce Google Maps Booking API feed errors over REST and RPC, delivering timely technical solutions for partners on the Reserve with Google platform.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Pipeline Changepoint Detection Tool</h3>
+            <p class="entry-meta">Python</p>
+            <p class="entry-summary">Built a changepoint-detection tool to visualize deviations in a bioinformatics pipeline, supporting Adaptive Biotechnologies' push toward FDA compliance.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Outpost: Tower Defense Analytics</h3>
+            <p class="entry-meta">C# · Unity3D</p>
+            <p class="entry-summary">Built an analytics framework for a PC tower defense game, parsing large datasets for an online scoreboard and long-term design refinement using the Unity Analytics engine.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Blue Monarch: Scene XML Serializer</h3>
+            <p class="entry-meta">C# · Unity3D</p>
+            <p class="entry-summary">Developed an XML serializer for a 2.5D MOBA game that cut the design team's scene-update time by 50%.</p>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <h2>Personal &amp; Academic Projects</h2>
+
+        <div class="entry">
+            <h3 class="entry-role">Web Scraper</h3>
+            <p class="entry-meta">Python · SQL Server · Azure · Tableau</p>
+            <p class="entry-summary">Built a Reddit and local-weather scraper that logs posting activity to a SQL Server database on Azure, then used the combined dataset in a Tableau visual to explore correlations between weather and posting habits. Intended as the foundation for a future machine-learning and language-parsing project.</p>
+            <p class="project-link"><a href="https://github.com/wobey/Web-Scraper" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Movie Rental Storefront</h3>
+            <p class="entry-meta">C++</p>
+            <p class="entry-summary">Simulated an automated movie rental storefront to catalog movies, customers, and transactions using inheritance and a factory pattern, with a templatized hash table and binary search tree built from scratch for efficient inserts and lookups.</p>
+            <p class="project-link"><a href="https://github.com/wobey/Blockbuster" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Interior Designer</h3>
+            <p class="entry-meta">JavaScript · HTML5 · WebGL</p>
+            <p class="entry-summary">A browser-based tool for designing a top-down layout of a home, letting users add, delete, group, scale, translate, and rotate furnishings across multiple rooms.</p>
+            <p class="project-link"><a href="https://github.com/wobey/Interior-Designer" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">File System</h3>
+            <p class="entry-meta">Java</p>
+            <p class="entry-summary">Implemented a Unix-like file system on ThreadOS supporting formatting, opening, reading, writing, seeking, closing, sizing, and deleting files.</p>
+            <p class="project-link"><a href="https://github.com/wobey/TAJ-FS" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">FTP Client</h3>
+            <p class="entry-meta">C++</p>
+            <p class="entry-summary">Built an FTP-like client supporting open, cd, ls, get, put, close, quit, del, and syst commands.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Magic: The Gathering Card Database</h3>
+            <p class="entry-meta">C# · SQL · Windows Forms</p>
+            <p class="entry-summary">Designed SQL queries to support buying, selling, and trading cards, and built the front-end UI for an online storefront to fetch and display card data.</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">Poker Hand Verifier</h3>
+            <p class="entry-meta">C#</p>
+            <p class="entry-summary">Compares two 5-card poker hands and determines the winner.</p>
+            <p class="project-link"><a href="https://github.com/wobey/Poker-Hand-Verifier" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-role">LUIS Demo</h3>
+            <p class="entry-meta">C# · Azure</p>
+            <p class="entry-summary">A demo chat bot integrating Microsoft's LUIS natural-language understanding service on Azure.</p>
+            <p class="project-link"><a href="https://github.com/wobey/LUIS_Demo" target="_blank">View on GitHub</a></p>
+        </div>
+    </section>
 </div>

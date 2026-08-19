@@ -1,7 +1,7 @@
 # Project Status
 
 ## Last Updated
-2026-08-17
+2026-08-18
 
 ## In Progress (uncommitted)
 - (none — everything below is being committed this session)
@@ -15,9 +15,7 @@
 - Skill-bar background colors (`.backend`, `.sql`, `.python`, `.automation`, `.csharp`, `.frontend`) are commented out in site.css, not removed — need to decide whether to restyle, restore, or drop the skill bars entirely.
 
 ## Next Up
-- Finish reviewing/polishing Experience and Education sections.
-- Skills section.
-- Projects section.
+- Projects page: user plans to trim/edit the drafted project list down to favorites.
 - Contact section.
 - Dark mode (optional, future).
 - Homepage: still uses a plain "GitHub" text link, no icon (Resume page has both icon + text) — consider matching, or leave homepage intentionally minimal.
@@ -30,6 +28,9 @@
 - `.resume-pdf-btn` generalized to reusable `.btn-cta` class (used by both Home and Resume pages).
 - About.cshtml redesigned to match the layout pattern of a reference site (davidmalloryhays.com/about): centered "About Me" heading, five icon + bold-lead-line card sections (`.about-section`), styled with the site's existing light/purple theme instead of the reference's dark theme. Closing career statement folded into the last card as a plain paragraph (not a separate highlighted box, per feedback).
 - Removed the Privacy page entirely (deemed unnecessary): deleted `Privacy.cshtml`/`Privacy.cshtml.cs`, removed its nav-bar link, and removed the reference to it in the (already commented-out) footer.
+- Homepage redesigned again: replaced the white `.home` card with a full-bleed `.home-hero` (`headshot.png` background + the site's existing `#667eea`→`#764ba2` gradient overlay at 85% opacity), matching a reference site's (davidmalloryhays.com) hero technique. Iterated with the user on crop position, text size/placement, and a full-bleed vs. bordered-card comparison — user chose full-bleed, text scaled up (~3rem name) and shifted down ~20% from center.
+- Nav bar (`_Layout.cshtml`/site.css): added active-page highlighting (bold + accent-colored underline via `ViewContext.RouteData`); made the nav bar itself full-bleed (flush to viewport top/left/right on every page) and pulled the homepage hero flush against it. Added `overflow-x: hidden` on `html` to fix a ~7px horizontal-scrollbar bug caused by the `100vw` full-bleed technique.
+- Projects.cshtml fully drafted from Resume.cshtml + the PDF resume + the user's public GitHub repos: a "Professional Work" section (9 entries derived from each job in the work history) and a "Personal & Academic Projects" section (8 entries, with GitHub links where a matching public repo exists). Dates removed from all project entries per user feedback.
 
 ## Deferred (not in current scope)
 - Broader site architecture: single-page vs. multi-page nav, consolidating About/Projects, headshot removal.
