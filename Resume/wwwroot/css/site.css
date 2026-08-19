@@ -1,3 +1,8 @@
+:root {
+  --page-edge-gap: 20px;
+  --navbar-gap: 16px;
+}
+
 html {
   font-size: 14px;
 }
@@ -13,6 +18,7 @@ html {
 }
 
 .navbar-nav .nav-link.active {
+    display: inline-block;
     color: #667eea !important;
     font-weight: 600;
     border-bottom: 2px solid #667eea;
@@ -21,7 +27,8 @@ html {
 .navbar {
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    margin-top: -20px;
+    margin-top: calc(-1 * var(--page-edge-gap));
+    margin-bottom: var(--navbar-gap);
 }
 
 html {
@@ -40,9 +47,8 @@ body {
   padding: 20px;*/
     background: linear-gradient(135deg, #667eea, #764ba2);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 60px;
     margin: 0;
-    padding: 20px;
+    padding: var(--page-edge-gap);
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -99,7 +105,7 @@ a:hover {
     position: relative;
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    margin-top: -16px;
+    margin-top: calc(-1 * var(--navbar-gap));
     min-height: 680px;
     display: flex;
     justify-content: center;
@@ -157,15 +163,12 @@ a:hover {
 .home-hero-content .btn-cta {
     font-size: 1.0625rem;
     padding: 10px 26px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
 .home-hero-content .home-links a {
     color: white;
     text-decoration: underline;
-}
-
-.home-hero-content .btn-cta {
-    border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
 .home-actions {
@@ -187,6 +190,7 @@ a:hover {
     background: white;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform .25s ease, box-shadow .25s ease;
 
     h1 {
         text-align: center;
@@ -203,6 +207,7 @@ a:hover {
     background: white;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform .25s ease, box-shadow .25s ease;
 
     h1 {
         text-align: center;
@@ -282,6 +287,12 @@ a:hover {
         box-shadow: 0 20px 40px rgba(0,0,0,.20);
         /*        box-shadow: 0 35px 70px rgba(0,0,0,.35);*/
     }
+
+.about:hover,
+.projects:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.20);
+}
 
 .job-title {
     font-size: 1rem;
@@ -404,27 +415,22 @@ a:hover {
 
 .backend {
     width: 90%;
-    /*background-color: #F28B82;*/ /* Soft Coral */
 }
 
 .sql {
     width: 95%;
-    /*background-color: #8AB4F8;*/ /* Pastel Blue */
 }
 
 .python {
     width: 85%;
-    /*background-color: #81C995;*/ /* Sage Green */
 }
 
 .automation {
     width: 90%;
-    /*background-color: #A7D7C5;*/ /* Mint */
 }
 
 .csharp {
     width: 70%;
-    /*background-color: #FBCB92;*/ /* Peach */
 }
 
 .frontend {
@@ -445,6 +451,13 @@ a:hover {
 
 .entry {
     margin-bottom: 20px;
+}
+
+.resume .entry {
+    background: #f7f7fb;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
 }
 
 .entry-role {
