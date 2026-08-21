@@ -1,7 +1,7 @@
 # Project Status
 
 ## Last Updated
-2026-08-18
+2026-08-20
 
 ## In Progress (uncommitted)
 - (none — everything below is being committed this session)
@@ -16,8 +16,18 @@
 - Contact section.
 - Dark mode (optional, future).
 - Homepage: still uses a plain "GitHub" text link, no icon (Resume page has both icon + text) — consider matching, or leave homepage intentionally minimal.
+- Once a real domain is purchased: add a `Sitemap:` line to `robots.txt`, and double-check the JSON-LD `url` field (already computed dynamically from the request host, so no code change needed, just verification).
+- GoatCounter: user's `wobey@uw.edu` account email is still unverified as of 2026-08-20 — worth confirming/verifying once convenient.
 
 ## Recently Completed
+- JSON-LD `Person` schema added to `_Layout.cshtml` (dynamic `baseUrl`, no hardcoded domain).
+- GoatCounter analytics script added to `_Layout.cshtml` (site code `wobey`). Confirmed via direct testing that GoatCounter's own client-side script deliberately filters out `localhost`/private-IP hits (e.g. `192.168.x.x`) by design — this is why dev/LAN testing showed "no data," not a misconfiguration. Will track normally once deployed to a real public domain.
+- `robots.txt` added (`wwwroot/robots.txt`) — allows all crawling; no `Sitemap:` line yet since there's no domain to point it at.
+- `@media print` stylesheet added for the Resume page (hides nav bar and PDF button, removes card shadow/max-width, for a clean printout).
+- Accessibility fixes (Lighthouse Resume-page score 95→100): plain-text LinkedIn/GitHub links on Resume.cshtml given `target="_blank" rel="noopener noreferrer"`; `.entry-dates` color contrast fixed (`#999`→`#666`, was 2.66:1, now passes 4.5:1); LinkedIn/GitHub SVG icons marked `aria-hidden="true"` since their parent `<a>` already carries `aria-label`.
+- Responsive fix: `.skill` row side margins reduced under a 480px viewport — was fixed at 50px each side, squeezing the Skills bars unreadably narrow on phone-width screens.
+- Nav bar layout-shift bug fixed (two contributing causes, confirmed via pixel-level measurement): removed the `font-weight: 600` bump on the active nav link (was widening that link's text and shifting siblings); added `overflow-y: scroll` to `html` so the vertical scrollbar's presence/absence (varies by page content height) no longer shifts the centered `.container` left/right between pages.
+- Resume.cshtml wording: GlobalLogic (2025–Present) entry changed from "saved team members roughly one hour per day" to "saved team members roughly 5+ hours per week."
 - Resume.cshtml: "Github" → "GitHub" capitalization fix in link text.
 - site.css: `.entry-summary` font-size finalized at `0.75rem`.
 - "Full Resume (PDF)" turned into a standout button (`.btn-cta`): gradient pill matching the site's accent color (`#667eea` → `#764ba2`), hover lift.
@@ -34,3 +44,4 @@
 
 ## Deferred (not in current scope)
 - Broader site architecture: single-page vs. multi-page nav, consolidating About/Projects, headshot removal.
+- Next side project (planned, separate repo, after this site is done): a "Job Market Pulse" job-postings data pipeline + dashboard (Python ingestion from the Adzuna API → Postgres → ASP.NET Core aggregation API → Tableau Public dashboard, scheduled via GitHub Actions cron). Full architecture and reasoning recorded in Claude's auto-memory for this project (not in this repo) — ask Claude to recall it, or see the 2026-08-20 conversation.

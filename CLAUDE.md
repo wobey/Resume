@@ -21,12 +21,8 @@ At the start of every session, also read PROJECT_STATUS.md for current progress 
 - Don't introduce JavaScript unless necessary.
 
 ## Current Progress
-- Working on Experience section.
-- Working on Education section.
+- Home, About, Resume, and Projects pages built. Currently in a polish/refinement phase: SEO (meta tags, JSON-LD, robots.txt), accessibility, analytics, and responsive/layout bug fixes.
 
 ## Future Tasks
-- Education
-- Skills
-- Projects
-- Contact
+- Contact section
 - Dark mode (optional)

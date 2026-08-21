@@ -20,7 +20,6 @@ html {
 .navbar-nav .nav-link.active {
     display: inline-block;
     color: #667eea !important;
-    font-weight: 600;
     border-bottom: 2px solid #667eea;
 }
 
@@ -35,6 +34,7 @@ html {
   position: relative;
   min-height: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body {
@@ -371,6 +371,13 @@ a:hover {
     /*    gap: 5px;*/
 }
 
+@media (max-width: 480px) {
+    .skill {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
 .skill-icon {
     width: 16px;
     height: 16px;
@@ -474,11 +481,29 @@ a:hover {
 
 .entry-dates {
     font-style: italic;
-    color: #999;
+    color: #666;
 }
 
 .entry-summary {
     font-size: 0.75rem;
     color: #333;
     margin: 0;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    header nav,
+    .resume-pdf {
+        display: none;
+    }
+
+    .resume {
+        max-width: 100%;
+        box-shadow: none;
+        transform: none !important;
+    }
 }
